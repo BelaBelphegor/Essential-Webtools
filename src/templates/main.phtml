@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>An Another Example Application</title>
+		<link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body style="color: white;">
+		<header style="height:34px;">
+			<div class="pure-menu pure-menu-horizontal">
+				<a href="#" class="pure-menu-heading pure-menu-link">BRAND</a>
+				<ul class="pure-menu-list">
+					<li class="pure-menu-item"><a href="#" class="pure-menu-link">Documentation</a></li>
+				</ul>
+			</div>
+		</header>
+		<section style="width:100%; height: 93%; margin:0 auto; margin-top:0; vertical-align:middle; background-image: url('https://pcfanatico.com/imagen.php?externa=http://i.imgur.com/d52GlZ4.jpg'); backgroup-position: center; background-attachment:fixed; background-size: cover;">
+			<div style="text-align:center; position:absolute; top: 40%; left:40%; translateY(-50%); width:22%;" id="react-app">
+			</div>
+		</section>
+		<footer style="text-align: center; color: black;">
+			<p>
+				Powered by SlimPHP & ReactJS
+			</p>
+		</footer>
+	<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react.js"></script>
+	<script src="https://cdn.jsdelivr.net/react/0.14.0-rc1/react-dom.js"></script>
+	<script>
+		class MyApps extends React.Component
+		{
+			constructor()
+			{
+				super();
+			}
+			render()
+			{
+				return (
+				React.createElement('form', { className:"pure-form" },
+						React.createElement('fieldset', {},
+							React.createElement('legend', {}, "A compact inline form"),
+							React.createElement('input', { type:"email", placeholder:"E-mail"}),
+							React.createElement('input', { type:"password", placeholder:"Password"}),
+							React.createElement('button', { type:"submit", className:"pure-button pure-button-primary" }, "Sign in"))
+						)
+				);
+			}
+		}
+		ReactDOM.render(React.createElement(MyApps), document.getElementById('react-app'));
+	</script>
+	</body>
+</html>

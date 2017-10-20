@@ -1,0 +1,17 @@
+{
+	"config":
+	{
+		"vendor-dir": "./src/vendor"
+	},
+	"require": {
+		"slim/slim": "^3.8",
+		"slim/php-view": "^2.0",
+		"monolog/monolog": "^1.17",
+		"robmorgan/phinx": "^0.5.1"
+	},
+	"autoload": {
+		"psr-4": {
+			"": "./src/classes/"
+		}
+	}
+}
