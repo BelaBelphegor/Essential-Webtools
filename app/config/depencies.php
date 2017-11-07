@@ -2,11 +2,11 @@
 
 $container = $app->getContainer();
 
-$container['view'] = new \Slim\Views\PhpRenderer("../templates/");
+$container['view'] = new \Slim\Views\PhpRenderer("../src/templates/");
 
 $container['logger'] = function($c) {
 		$logger = new \Monolog\Logger('movida_logger');
-		$file_handler = new \Monolog\Handler\StreamHandler("../logs/app.log");
+		$file_handler = new \Monolog\Handler\StreamHandler("../src/logs/app.log");
 		$logger->pushHandler($file_handler);
 		return ($logger);
 };
